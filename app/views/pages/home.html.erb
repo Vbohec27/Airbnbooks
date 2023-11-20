@@ -1,2 +1,37 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<nav class="navbar">
+  <div class="nav-left">
+    <i class="fa-regular fa-bookmark fa-2xl p-3" style="color: #ffb000;"></i>
+    <a href="" class="nav-brand my-auto">Airbnbooks</a>
+  </div>
+  <div class="nav-right d-flex">
+    <ul class="navbar-nav mr-auto list-group-horizontal my-auto">
+      <%# if user_signed_in? %>
+      <li class="nav-item list-group-item">
+        <a href="" class="nav-link">Log out</a>
+      </li>
+      <%# else %>
+      <li class="nav-item list-group-item">
+        <a href="" class="nav-link">Sign up</a>
+      </li>
+      <li class="nav-item list-group-item">
+        <a href="" class="nav-link">Log in</a>
+      </li>
+      <%# end %>
+    </ul>
+    <form class="nav-form form-inline my-2 my-lg-0 d-flex p-2">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search books" aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<%# books.forEach do |book| %>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://static.wikia.nocookie.net/harrypotter/images/7/7b/Harry01english.jpg/revision/latest/scale-to-width-down/250?cb=20150208225304" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<%# end %>

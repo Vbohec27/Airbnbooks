@@ -1,12 +1,32 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
-  background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.nav-left {
+  align-items: center;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-brand {
+  font-family: 'Spectral', serif;
+  text-decoration: none;
+  color: black;
+  font-size: 1.8rem;
+}
+
+.nav-form {
+  font-family: 'Karla', sans-serif;
+  justify-content: flex-center;
+}
+
+.nav-form button {
+  border-radius: 6px;
+  margin-left: 3px;
+}
+
+.nav-form input {
+  border-radius: 6px;
+}
+
+.nav-item {
+  margin-right: 16px;
 }
