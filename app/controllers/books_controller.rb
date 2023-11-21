@@ -13,13 +13,23 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.find(book_params)
+    @book = Book.new(book_params)
+    @book.user = current_user
     if @book.save
-      redirect_to @book, notice: "Book was successfully created"
+      redirect_to books_path, notice: "Book was successfully created"
     else
       render :new, status: :unprocessable_entity
     end
   end
+
+  # def create
+  #   @restaurant = Restaurant.new(restaurant_params)
+  #   if @restaurant.save
+  #     redirect_to restaurant_path(@restaurant)
+  #   else
+  #     render :new, status: :unprocessable_entity
+  #   end
+  # end
 
   private
 
