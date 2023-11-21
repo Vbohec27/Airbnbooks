@@ -7,7 +7,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= book.title %></h5>
             <p class="card-text"><%= book.description %></p>
-            <a href="#" class="btn btn-primary card-btn">See more</a>
+            <%= link_to "See more", book_path(book), class: "btn btn-primary card-btn" %>
           </div>
         </div>
       </div>
