@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "books#index"
-  # books and in books there is bookings nested
-  # dashboard a seperate route like books? pages#home?
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,5 +10,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get "/books/:id", to: "books#show", as: "show"
+  # get "/books/:id", to: "books#show", as: "show"
+  resources :books, only: %i[index show]
 end
