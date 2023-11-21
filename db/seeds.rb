@@ -10,12 +10,12 @@
 
 
 Book.create(title: "1984", author: "George Orwell",
-description: "it happens in 1984", user_id: 1 )
+description: "it happens in 1984", user_id: 1, price: 2 )
 Book.create(title: "ND de Paris", author: "Victor Hugo",
-description: "it happens in the 19th century", user_id: 1 )
+description: "it happens in the 19th century", user_id: 1, price: 3 )
 Book.create(title: "The Stranger", author: "Albert Camus",
-description: "it happens in 20th century", user_id: 1 )
+description: "it happens in 20th century", user_id: 1, price: 4 )
 Book.create(title: "American Psycho", author: "Bret Easton Ellis",
-description: "it happens in the eighties", user_id: 2 )
+description: "it happens in the eighties", user_id: 2, price: 2 )
 Book.create(title: "Shutter Island", author: "Dennis Lehane",
-description: "it happens on an island", user_id: 2 )
+description: "it happens on an island", user_id: 2, price: 1 )
