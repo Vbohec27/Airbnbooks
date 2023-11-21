@@ -7,7 +7,9 @@
     <ul class="navbar-nav mr-auto list-group-horizontal my-auto">
       <%# if user_signed_in? %>
       <li class="nav-item list-group-item">
-        <a href="" class="nav-link">Log out</a>
+        <%= link_to destroy_user_session_path, data: { turbo_method: :delete } do %>
+        <p class="nav-link">Log out</p>
+        <% end %>
       </li>
       <%# else %>
       <li class="nav-item list-group-item">
