@@ -3,7 +3,7 @@
     <% @books.each do |book| %>
       <div class="col m-5">
         <div class="card" style="width: 18rem;">
-          <%= image_tag(book.image_url) %>
+          <%# <%= image_tag(book.image_url) %> 
           <div class="card-body">
             <h5 class="card-title"><%= book.title %></h5>
             <p class="card-text"><%= book.description %></p>
