@@ -12,4 +12,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  #route for the "new" action
+
+  get "books/new", to: "books#new"
+
+  #route for the create action
+
+  post "books", to: "books#create"
 end
