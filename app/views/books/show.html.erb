@@ -1,7 +1,7 @@
 <div class="container d-flex justify-content-center mt-5">
-  <div class="card" style="width: 30rem;">
+  <div class="card" style="width: 25rem;">
     <a><%= link_to "go back", root_path %></a>
-    <img class="card-img-top" src="https://static.wikia.nocookie.net/harrypotter/images/7/7b/Harry01english.jpg/revision/latest/scale-to-width-down/250?cb=20150208225304" alt="Card image cap">
+    <%= image_tag(@book.image_url) %>
     <div class="card-body">
       <h5 class="card-title"><%= @book.title %></h5>
       <h6 class="card-author v "><%= @book.author %></h6>
