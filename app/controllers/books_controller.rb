@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: %i[ show ]
-
+  before_action :set_book, only: [ :show ]
+    
   def index
     @books = Book.all
   end
@@ -22,22 +22,9 @@ class BooksController < ApplicationController
     end
   end
 
-  # def create
-  #   @restaurant = Restaurant.new(restaurant_params)
-  #   if @restaurant.save
-  #     redirect_to restaurant_path(@restaurant)
-  #   else
-  #     render :new, status: :unprocessable_entity
-  #   end
-  # end
-
   private
 
   def set_book
     @book = Book.find(params[:id])
-  end
-
-  def book_params
-    params.require(:book).permit(:title, :author, :description, :price)
   end
 end
