@@ -1,30 +1,3 @@
-<nav class="navbar">
-  <div class="nav-left">
-    <i class="fa-regular fa-bookmark fa-2xl p-3" style="color: #ffb000;"></i>
-    <a href="" class="nav-brand my-auto">Airbnbooks</a>
-  </div>
-  <div class="nav-right d-flex">
-    <ul class="navbar-nav mr-auto list-group-horizontal my-auto">
-      <% if user_signed_in? %>
-      <li class="nav-item list-group-item">
-        <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link" %>
-      </li>
-      <% else %>
-      <li class="nav-item list-group-item">
-        <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item list-group-item">
-        <%= link_to "Log in", new_user_session_path, class: "nav-link" %>
-      </li>
-      <% end %>
-    </ul>
-    <form class="nav-form form-inline my-2 my-lg-0 d-flex p-2">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search books" aria-label="Search">
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-
 <div class="container card-container">
   <div class="row">
     <% @books.each do |book| %>
