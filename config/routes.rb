@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#home"
+  root to: "books#index"
   # books and in books there is bookings nested
   # dashboard a seperate route like books? pages#home?
 
