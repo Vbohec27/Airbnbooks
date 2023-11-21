@@ -1,28 +1,31 @@
 <div class = "container m-5 align-self-stretch d-flex">
-  <div class = "card w-25 p-3 my-auto mx-auto">
-    <div class="card-body">
-      <%= form_with model: @book do |form| %>
-        <div class ="form p-2">
-          <%= form.label :author, "Title" %>
-          <%= form.text_field :title %>
-        </div>
-        <div class ="form p-2">
-          <%= form.label :author, "Author" %>
-          <%= form.text_field :author %>
-        </div>
-        <div class ="form p-2">
-          <%= form.label :author, "Description" %>
-          <%= form.text_field :description %>
-        </div>
-        <div class ="form p-2">
-          <%= form.label :author, "Price" %>
-          <%= form.number_field :price%>
-        </div>
 
-        <div class ="form p-2 btn btn-flat">
-        <%= form.submit %>
-        </div>
-      <% end %>
+  <div class = "card p-3 my-auto mx-auto" style="width:250px">
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="card-body">
+        <%= form_with model: @book do |form| %>
+          <div class ="form p-2">
+            <%= form.label :author, "Title" %>
+            <%= form.text_field :title %>
+          </div>
+          <div class ="form p-2">
+            <%= form.label :author, "Author" %>
+            <%= form.text_field :author %>
+          </div>
+          <div class ="form p-2">
+            <%= form.label :author, "Description" %>
+            <%= form.text_field :description %>
+          </div>
+          <div class ="form p-2">
+            <%= form.label :author, "Price" %>
+            <%= form.number_field :price%>
+          </div>
+
+          <div class ="form p-2 btn btn-flat">
+          <%= form.submit %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
