@@ -18,7 +18,7 @@
               <p class="card-text"><%= book.description %></p>
             </div>
           </div>
-          <%= link_to "See more", book_path(book), class: "btn btn-primary card-btn" %>
+          <div class="see-more-btn"><%= link_to "See more", book_path(book), class: "btn btn-primary card-btn" %></div>
         </div>
       </div>
     <% end %>
