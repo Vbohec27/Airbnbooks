@@ -1,15 +1,51 @@
-<div class="container d-flex justify-content-center mt-5">
-  <div class="card" style="width: 25rem;">
-    <a><%= link_to "go back", root_path %></a>
-    <%# <%= image_tag(@book.image_url) %>
-    <div class="card-body">
-      <h5 class="card-title"><%= @book.title %></h5>
-      <h6 class="card-author v "><%= @book.author %></h6>
-      <p class="card-text"><%= @book.description %></p>
-      <div class="container d-flex justify-content-between ">
-        <a href="#" class="btn btn-primary card-btn">Rent it!</a>
-        <h2>€<%= @book.price %></h2>
+<main>
+  <div class="card-show">
+    <div class="card__title">
+      <div class="icon">
+        <a href="/"><i class="fa fa-arrow-left"></i></a>
+      </div>
+      <h3>-Rental-</h3>
+    </div>
+    <div class="card__body">
+      <div class="half">
+        <div class="image">
+          <% if @book.image_url != nil %>
+          <%= image_tag(@book.image_url) %>
+          <% else %>
+            <%= image_tag(“book_default.jpg”) %>
+          <% end %>
+        </div>
+      </div>
+      <div class="half">
+        <div class="featured_text">
+          <h1><%= @book.title %></h1>
+          <p class="sub">by <%= @book.author %></p>
+          <p class="price">€<%= @book.price %></p>
+        </div>
+        <div class="description">
+          <p><%= @book.description %></p>
+        </div>
+        <span class="stock"><i class="fa fa-pen"></i> Available</span>
+        <div class="reviews">
+          <ul class="stars">
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star-o"></i></li>
+          </ul>
+          <span>(64 reviews)</span>
+        </div>
+      </div>
+    </div>
+    <div class="card__footer">
+      <div class="recommend">
+        <p></p>
+        <h3></h3>
+      </div>
+      <div class="action">
+        <button type="button">Add to cart</button>
       </div>
     </div>
   </div>
-</div>
+</main>
