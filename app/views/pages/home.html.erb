@@ -3,23 +3,29 @@
  url('https://images.unsplash.com/photo-1591951425328-48c1fe7179cd')">
   <div class="container">
     <h1>Connecting <strong>book owners</strong> and <strong>book borrowers</strong>!</h1>
+    <%= link_to "See what's out there", books_path, class: "btn btn-primary root-btn" %>
   </div>
 </div>
 
     <!-- code a "How it works" section -->
 
-<div class="container">
-  <h2>Our offer</h2>
+<div class="container root-container">
+  <h2 class="">Our offer</h2>
   <div class="row">
-      <div class="card col">
+      <div class="card col root-card">
         <%# <img src="https://lewagon.github.io/landing-page-challenge/images/apply.svg"> %>
-        <h3>Rent-out your books</h3>
-        <p>You have books ? Rent-them to our community members</p>
+        <div class="root-card-content">
+          <h3>Rent-out your books</h3>
+          <p>You have books ? Rent-them to our community members. Unlock the magic of reading by sharing your collection with our vibrant community! Have a treasure trove of books? Let your literary gems find new homes by renting them out to fellow members. Join us in creating a shared world of knowledge and stories – because great books deserve to be passed on!</p>
+        </div>
+
       </div>
-      <div class="card col">
+      <div class="card col root-card">
         <%# <img src="https://lewagon.github.io/landing-page-challenge/images/learn.svg"> %>
-        <h3>Borrow books</h3>
-        <p>You would like to read books? Borrow them from our community members </p>
-      </div>
+        <div class="root-card-content">
+          <h3>Borrow books</h3>
+          <p>You would like to read books? Borrow them from our community members. Dive into a world of endless possibilities by borrowing captivating books from our generous community members! If you have a thirst for knowledge or a craving for thrilling stories, look no further. Join our community, where book lovers come together to share the joy of reading. Borrowing has never been more exciting – let the adventure begin!</p>
+        </div>
+        </div>
     </div>
 </div>

@@ -1,6 +1,7 @@
 .card {
   border-radius: 6px;
   height: 700px;
+  box-shadow: 0 6px 6px rgba(#000, 0.3);
 }
 
 .card-btn {
@@ -17,4 +18,23 @@
   text-overflow: ellipsis;
   overflow: hidden;
   height: 150px;
+}
+
+.root-container {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.root-card {
+  height: 250px;
+  width: 150px;
+  margin: 50px;
+}
+
+.root-card-content {
+  margin: 20px;
+}
+
+.root-btn {
+  margin-top: 10px;
 }

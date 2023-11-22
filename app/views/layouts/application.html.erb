@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
+    <%= render "layouts/navbar" unless params[:action] == "home"%>
     <%= yield %>
   </body>
 </html>
