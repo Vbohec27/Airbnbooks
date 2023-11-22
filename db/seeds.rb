@@ -10,7 +10,7 @@ puts "deleting Users"
 User.delete_all
 puts "creating Users"
 user1 = User.create(email: "admin@admin.com", password: "123123", username: "admin")
-user2 = User.create(email: "guest@guest.com", password: "123123", guest: "guest")
+user2 = User.create(email: "guest@guest.com", password: "123123", username: "guest")
 #   end
 puts "deleting books"
 Book.delete_all
