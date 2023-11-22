@@ -1,8 +1,20 @@
 .card {
   border-radius: 6px;
+  height: 700px;
 }
 
 .card-btn {
   border-radius: 6px;
 }
 
+.see-more-btn {
+  position: absolute;
+  top: 650px;
+  left: 16px;
+}
+
+.card-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 150px;
+}
