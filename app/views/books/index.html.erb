@@ -3,11 +3,11 @@
     <% @books.each do |book| %>
       <div class="col m-5">
         <div class="card" style="width: 18rem;">
-        <% if book.image_url %>
-          <%= image_tag(book.image_url) %>
-        <% else %>
-          <%= image_tag("/app/assets/images/book_default.jpg") %>
-        <% end %>
+          <% if book.image_url != nil %>
+            <%= image_tag(book.image_url) %>
+          <% else %>
+            <%= image_tag("book_default.jpg") %>
+          <% end %>
           <div class="card-body">
             <h5 class="card-title"><%= book.title %></h5>
             <p class="card-text"><%= book.description %></p>
