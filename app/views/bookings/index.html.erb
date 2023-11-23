@@ -1,29 +1,24 @@
-<div class="container card-container">
-  <h2>The books you borrow</h2>
-  <hr>
-  <div class="row">
+<h1>All Bookings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
     <% @bookings.each do |booking| %>
-      <div class="col mb-5">
-        <div class="card d-flex flex-column justify-content-between" style="width: 18rem;">
-          <% if book.image_url != nil %>
-            <%= image_tag(book.image_url, class: 'folded-corner') %>
-          <% else %>
-            <%= image_tag("book_default.jpg", class: 'folded-corner') %>
-          <% end %>
-          <div class="card-body">
-            <h3 class="card-title" style="font-size: 1.7rem"><%= book.title %></h5>
-            <div class="card-overflow">
-              <div class="">
-                <p class="card-text"><strong>Author - <%= book.author %></strong></p>
-                <p class="card-text"><strong>€<%= book.price %> per day</strong></p>
-              </div>
-              <hr>
-              <p class="card-text"><%= book.description %></p>
-            </div>
-          </div>
-          <div class="see-more-btn"><%= link_to "See more", book_path(book), class: "btn btn-primary card-btn" %></div>
-        </div>
-      </div>
+      <tr>
+        <td><%= booking.book.title %></td>
+        <td><%= booking.book.author %></td>
+        <td><%= booking.start_date %></td>
+        <td><%= booking.end_date %></td>
+        <td><%= booking.sum_price %></td>
+      </tr>
     <% end %>
-  </div>
-</div>
+  </tbody>
+</table>

@@ -16,7 +16,7 @@
             <div>
               <p>Total price (in Є): <span data-price="<%=@book.price%>" data-price-target="total"></p>
               <%= form.input :sum_price, as: :hidden,
-input_html: { data: { price_target: "sum" } } %>
+              input_html: { data: { price_target: "sum" } } %>
           </div>
           <div class ="form p-2 btn btn-flat">
           <%= form.submit %>
