@@ -29,11 +29,16 @@
     <% @books.each do |book| %>
       <div class="col mb-5">
         <div class="card d-flex flex-column justify-content-between" style="width: 18rem;">
-          <% if book.image_url != nil %>
-            <%= image_tag(book.image_url, class: 'folded-corner') %>
+           <% if book.photo.attached? %>
+            <div style="background-image: url('<%= cl_image_path book.photo.key %>')" id="index-card-bg"></div>
           <% else %>
-            <%= image_tag("book_default.jpg", class: 'folded-corner') %>
+            <div style="background-image: url('<%= image_path 'book_default.jpg' %>')" id="index-card-bg"></div>
           <% end %>
+
+
+
+
+
           <div class="card-body">
             <h3 class="card-title" style="font-size: 1.7rem"><%= book.title %></h5>
             <div class="card-overflow">
@@ -42,7 +47,6 @@
                 <p class="card-text"><strong>€<%= book.price %> per day</strong></p>
               </div>
               <hr>
-              <p class="card-text"><%= book.description %></p>
             </div>
           </div>
           <div class="see-more-btn"><%= link_to "See more", book_path(book), class: "btn btn-primary card-btn" %></div>
