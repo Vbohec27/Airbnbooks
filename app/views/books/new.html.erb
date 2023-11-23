@@ -13,8 +13,12 @@
             <%= form.text_field :author %>
           </div>
           <div class ="form p-2">
-            <%= form.label :author, "Description" %>
+            <%= form.label :description, "Description" %>
             <%= form.text_field :description %>
+          </div>
+          <div class="form p-2">
+            <%= form.label :genre, "Genre" %>
+            <%= form.select :genre, Book::VALID_GENRES, {}, multiple: true %>
           </div>
           <div class ="form p-2">
             <%= form.label :author, "Price" %>

@@ -21,7 +21,7 @@ Book.create!(
   description: "1984 is a dystopian novel that was written by George Orwell and published in 1949. It tells the story of Winston Smith, a citizen of the miserable society of Oceania, who is trying to rebel against the Party and its omnipresent symbol, Big Brother.",
   user_id: user1.id,
   price: 2,
-  image_url: "https://upload.wikimedia.org/wikipedia/en/5/51/1984_first_edition_cover.jpg"
+  image_url: "https://upload.wikimedia.org/wikipedia/en/5/51/1984_first_edition_cover.jpg",
 )
 Book.create!(
   title: "ND de Paris",
