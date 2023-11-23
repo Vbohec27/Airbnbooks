@@ -76,3 +76,7 @@ end
 # new gams
 
 gem "devise"
+
+gem "geocoder"
+
+gem "dotenv-rails"
