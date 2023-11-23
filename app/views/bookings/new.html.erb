@@ -2,19 +2,19 @@
 
   <div class = "card p-3 my-auto mx-auto" style="width:250px">
     <div class="d-flex align-items-center justify-content-center">
-      <div class="card-body">
+      <div class="card-body" data-controller="price">
         <%= simple_form_for [@book, @booking] do |form| %>
           <div class ="form p-2">
             <%= form.input :start_date,
             as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+            input_html: { data: { controller: "datepicker", price_target:"start"} } %>
           </div>
           <div class ="form p-2">
             <%= form.input :end_date,
             as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+            input_html: { data: { controller: "datepicker", action:"change->price#calculate", price_target:"end" } } %>
             <div>
-              <p>Total price: <%= number_to_currency(@show_total_price) %></p>
+              <p>Total price: <span data-price="<%=@book.price%>" data-price-target="total"></p>
           </div>
           <div class ="form p-2 btn btn-flat">
           <%= form.submit %>

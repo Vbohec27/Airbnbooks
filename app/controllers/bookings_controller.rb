@@ -23,16 +23,6 @@ class BookingsController < ApplicationController
       end
     end
 
-    def calculate_price(start_date, end_date, price_per_day)
-      days = (end_date - start_date).to_i
-      price_per_day * days
-    end
-
-    def show_total_price
-      @booking = Booking.find(params[booking_params])
-      @total_price = calculate_price(@booking.start_date, @booking.end_date, @booking.book.price_per_day)
-    end
-
     private
 
     def set_book
