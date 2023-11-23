@@ -6,7 +6,7 @@ class Book < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  serialize :genre, coder: JSON
+  # serialize :genre, coder: JSON
   VALID_GENRES = ['Fiction', 'Non-fiction', 'Mystery', 'Science Fiction', 'Fantasy', 'Y/A']
 
   # validate :validate_genre
