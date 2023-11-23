@@ -6,14 +6,14 @@
 #
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
+puts "deleting books"
+Book.delete_all
 puts "deleting Users"
 User.delete_all
 puts "creating Users"
 user1 = User.create(email: "admin@admin.com", password: "123123", username: "admin")
 user2 = User.create(email: "guest@guest.com", password: "123123", username: "guest")
 #   end
-puts "deleting books"
-Book.delete_all
 puts "creating books"
 Book.create!(
   title: "1984",
