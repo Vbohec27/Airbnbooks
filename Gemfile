@@ -77,6 +77,8 @@ end
 
 gem "devise"
 
+gem "geocoder"
+
 gem "dotenv-rails"
 
 gem "cloudinary"
