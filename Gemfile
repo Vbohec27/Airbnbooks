@@ -76,3 +76,7 @@ end
 # new gams
 
 gem "devise"
+
+gem "dotenv-rails"
+
+gem "cloudinary"
