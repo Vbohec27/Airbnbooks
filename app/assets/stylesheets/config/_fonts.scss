@@ -1,11 +1,11 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sintony&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Karla", "sans-serif";
-$headers-font: "Spectral", "serif";
+$body-font: 'Poppins', "sans-serif";
+$headers-font: 'Sintony', "sans-serif";
 $show-h1: "Montserrat", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
