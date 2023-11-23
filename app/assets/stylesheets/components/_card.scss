@@ -1,7 +1,24 @@
 .card {
   border-radius: 6px;
-  height: 700px;
+  height: 750px;
   box-shadow: 0 6px 6px rgba(#000, 0.3);
+}
+
+.container.map {
+  margin: 50px auto;
+  max-height: fit-content;
+}
+
+.card.map {
+  max-height: 500px;
+}
+
+.card.explain {
+  height: 100%;
+}
+
+.card img {
+  height: 500px;
 }
 
 .card-btn {
@@ -10,13 +27,14 @@
 
 .see-more-btn {
   position: absolute;
-  top: 650px;
+  top: 695px;
   left: 16px;
 }
 
 .card-overflow {
-  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis " ...";
   height: 150px;
 }
 
@@ -26,7 +44,7 @@
 }
 
 .root-card {
-  height: 250px;
+  height: 300px;
   width: 150px;
   margin: 50px;
 }
@@ -37,4 +55,5 @@
 
 .root-btn {
   margin-top: 10px;
+  border-radius: 6px;
 }

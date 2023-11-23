@@ -1,20 +1,47 @@
-<div class="map">
-
+<div class="container map text-end">
+  <div class="row">
+    <div class="col-6 map align-middle">
+      <div class="card map"><%= image_tag("map_example.png") %></div>
+    </div>
+    <div class="col-6 explain">
+      <hr>
+      <h2>How it works</h2>
+      <p>
+      Welcome to our community-driven haven of second-hand books, where diverse literary treasures await your discovery. Prices set by owners ensure affordable access to captivating stories, providing a daily escape into imaginative realms.
+      <br><br>
+      Explore titles further with a click, unveiling nuances, history, and charm. This isn't just a transaction; it's an invitation to embark on a unique literary journey.
+      <br><br>
+      Our interactive map guides you through this literary landscape, pinpointing book locations. Look up your neighborhood and discover exciting reads just around the corner.
+      <br><br>
+      More than a book collection, this is a shared space fostering a love for reading and storytelling. Each book holds someone's journey and passion for the written word.
+      <br><br>
+      Whether a seasoned reader or a curious newcomer, relish the joy of literary exploration. Let the pages turn and transport you to new worlds. Happy reading!
+      </p>
+      <hr>
+    </div>
+  </div>
 </div>
 
 <div class="container card-container">
+  <h2>Available books</h2>
+  <hr>
   <div class="row">
     <% @books.each do |book| %>
-      <div class="col m-5">
+      <div class="col mb-5">
         <div class="card d-flex flex-column justify-content-between" style="width: 18rem;">
           <% if book.image_url != nil %>
-            <%= image_tag(book.image_url) %>
+            <%= image_tag(book.image_url, class: 'folded-corner') %>
           <% else %>
-            <%= image_tag("book_default.jpg") %>
+            <%= image_tag("book_default.jpg", class: 'folded-corner') %>
           <% end %>
           <div class="card-body">
-            <h5 class="card-title"><%= book.title %></h5>
+            <h3 class="card-title" style="font-size: 1.7rem"><%= book.title %></h5>
             <div class="card-overflow">
+              <div class="">
+                <p class="card-text"><strong>Author - <%= book.author %></strong></p>
+                <p class="card-text"><strong>€<%= book.price %> per day</strong></p>
+              </div>
+              <hr>
               <p class="card-text"><%= book.description %></p>
             </div>
           </div>

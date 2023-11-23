@@ -1,5 +1,6 @@
 .navbar {
   justify-content: space-between;
+  background-color: transparent;
 }
 
 .nav-left {
@@ -7,14 +8,13 @@
 }
 
 .nav-brand {
-  font-family: 'Spectral', serif;
   text-decoration: none;
   color: black;
   font-size: 1.8rem;
+  padding-left: 20px;
 }
 
 .nav-form {
-  font-family: 'Karla', sans-serif;
   justify-content: flex-center;
 }
 
