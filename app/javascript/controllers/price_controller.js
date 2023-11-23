@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="price"
 export default class extends Controller {
-  static targets = ["start", "end", "total"]
+  static targets = ["start", "end", "total", "sum"]
   static values = {price:String}
 calculate() {
 let startDate = this.startTarget.value
@@ -21,6 +21,6 @@ const bookPrice = +this.totalTarget.dataset.price
 const totalPrice = bookPrice* days
 
 this.totalTarget.innerText = totalPrice
-
+this.sumTarget.value = totalPrice
   }
 }

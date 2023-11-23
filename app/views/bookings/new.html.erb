@@ -14,7 +14,9 @@
             as: :string,
             input_html: { data: { controller: "datepicker", action:"change->price#calculate", price_target:"end" } } %>
             <div>
-              <p>Total price: <span data-price="<%=@book.price%>" data-price-target="total"></p>
+              <p>Total price (in Є): <span data-price="<%=@book.price%>" data-price-target="total"></p>
+              <%= form.input :sum_price, as: :hidden,
+input_html: { data: { price_target: "sum" } } %>
           </div>
           <div class ="form p-2 btn btn-flat">
           <%= form.submit %>
