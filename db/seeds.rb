@@ -23,7 +23,6 @@ Book.create!(
   price: 2,
   image_url: "https://upload.wikimedia.org/wikipedia/en/5/51/1984_first_edition_cover.jpg",
   address: "Amsterdam"
-
 )
 Book.create!(
   title: "ND de Paris",

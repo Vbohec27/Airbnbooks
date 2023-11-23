@@ -17,8 +17,15 @@
   height: 100%;
 }
 
-.card img {
-  height: 500px;
+// .card img {
+//   max-height: 490px !important;
+//   height: 490px;
+// }
+
+#index-card-bg {
+  background-position: center;
+  background-size: cover;
+  padding-top: 480px;
 }
 
 .card-btn {
