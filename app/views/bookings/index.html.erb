@@ -1,20 +1,58 @@
-<div class="container">
-  <h4>All Bookings</h4>
-  <hr>
-  <div class="row row-cols-2 row-cols-md-4 g-4">
-    <% @bookings.each do |booking| %>
-      <div class="col mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title"><strong><%= booking.book.title %></strong></h5>
-            <p class="card-text"><strong>Author:</strong> <%= booking.book.author %></p>
-            <p class="card-text"><strong>Total price (in €):</strong> <%= booking.sum_price %></p>
-            <p class="card-text"><strong>Start Date:</strong> <%= booking.start_date %></p>
-            <p class="card-text text-wrap"><strong>End Date:</strong> <%= booking.end_date %></p>
-          </div>
-        </div>
-      </div>
-    <% end %>
+<main>
+  <div class="card-show">
+    <div class="card__title text-start">
+      <h3>Dashboard</h3>
+    </div>
+    <div class="back-to-index-btn float-left mx-4"><%= link_to "Back to the booklist", books_path, class: "btn btn-primary card-btn icon" %></div>
+
+    <div class="table-responsive mt-4 mx-4">
+      <h4 class="subtitle"> The books you borrowed </h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Book title</th>
+            <th>Author</th>
+            <th>Start date</th>
+            <th>End date</th>
+            <th>Total price in €</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @bookings.each do |booking| %>
+            <tr>
+              <td><%= booking.book.title %></td>
+              <td><%= booking.book.author %></td>
+              <td><%= booking.start_date %></td>
+              <td><%= booking.end_date %></td>
+              <td><%= booking.sum_price %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="table-responsive mt-4 mx-4">
+        <h4 class="subtitle"> The books you rent-out </h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Book title</th>
+            <th>Author</th>
+            <th>Price / day in €</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @books.each do |book| %>
+            <tr>
+              <td><%= book.title %></td>
+              <td><%= book.author %></td>
+              <td><%= book.price %></td>
+
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <div class="back-to-index-btn"><%= link_to "Back to the booklist", books_path, class: "btn btn-primary card-btn" %></div>
-</div>
+</main>
