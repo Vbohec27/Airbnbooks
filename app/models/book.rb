@@ -1,7 +1,11 @@
 class Book < ApplicationRecord
   has_one_attached :photo
   belongs_to :user
-  validates :description, length: { maximum: 320 }
+  validates :title, presence: true
+  validates :author, presence: true
+  validates :address, presence: true
+  validates :price, presence: true
+  validates :description, length: { maximum: 320 }, presence: true
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?

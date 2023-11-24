@@ -17,11 +17,6 @@
   height: 100%;
 }
 
-// .card img {
-//   max-height: 490px !important;
-//   height: 490px;
-// }
-
 #index-card-bg {
   background-position: center;
   background-size: cover;
@@ -45,22 +40,13 @@
   height: 150px;
 }
 
-.root-container {
+.container.root {
   padding-top: 50px;
   text-align: center;
-}
-
-.root-card {
-  height: 300px;
-  width: 150px;
-  margin: 50px;
-}
-
-.root-card-content {
-  margin: 20px;
+  padding-bottom: 100px;
 }
 
 .root-btn {
-  margin-top: 10px;
   border-radius: 6px;
+  margin-top: 20px;
 }
