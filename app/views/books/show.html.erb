@@ -2,7 +2,7 @@
   <div class="card-show">
     <div class="card__title">
       <div class="icon">
-        <a href="/"><i class="fa fa-arrow-left"></i></a>
+        <a href="/books/"><i class="fa fa-arrow-left"></i></a>
       </div>
       <h3>-Rental-</h3>
     </div>
@@ -44,7 +44,9 @@
         <h3></h3>
       </div>
       <div class="action">
+        <%= link_to new_book_booking_path(@book) do %>
         <button type="button">Borrow this book</button>
+        <% end %>
       </div>
     </div>
   </div>
