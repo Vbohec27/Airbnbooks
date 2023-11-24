@@ -16,12 +16,12 @@ main{
 
     h3{
       flex: 0 1 200px;
-      text-align: center;
+      text-align: right;
       margin: 0;
       color: #252525;
-      font-family: sans-serif;
-      font-weight: 600;
-      font-size: 30px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 36px;
       text-transform: uppercase;
     }
 
@@ -182,7 +182,7 @@ main{
     }
 
     .action{
-      button{
+
         cursor: pointer;
         border: 1px solid #1A3263;
         padding: 14px 30px;
@@ -197,7 +197,7 @@ main{
           background: #fff;
           color: #1A3263;
         }
-      }
+      
     }
   }
 }

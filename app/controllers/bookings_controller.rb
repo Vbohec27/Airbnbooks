@@ -16,6 +16,7 @@ class BookingsController < ApplicationController
       @booking = Booking.new(booking_params)
       @booking.book = @book
       @booking.user = current_user
+      @booking.sum_price = (@booking.end_date - @booking.start_date) * @book.price
       if @booking.save
         redirect_to bookings_path
       else
@@ -30,6 +31,6 @@ class BookingsController < ApplicationController
     end
 
     def booking_params
-      params.require(:booking).permit(:start_date, :end_date, :sum_price)
+      params.require(:booking).permit(:start_date, :end_date)
     end
 end
