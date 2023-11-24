@@ -1,0 +1,20 @@
+<div class="container">
+  <h4>All Bookings</h4>
+  <hr>
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    <% @bookings.each do |booking| %>
+      <div class="col mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><strong><%= booking.book.title %></strong></h5>
+            <p class="card-text"><strong>Author:</strong> <%= booking.book.author %></p>
+            <p class="card-text"><strong>Total price (in €):</strong> <%= booking.sum_price %></p>
+            <p class="card-text"><strong>Start Date:</strong> <%= booking.start_date %></p>
+            <p class="card-text text-wrap"><strong>End Date:</strong> <%= booking.end_date %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="back-to-index-btn"><%= link_to "Back to the booklist", books_path, class: "btn btn-primary card-btn" %></div>
+</div>
