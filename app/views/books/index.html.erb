@@ -1,8 +1,8 @@
-<div class="container map text-end">
+<div class="container map">
   <div class="row">
-    <div class="col-6 map align-middle mt-3">
+    <div class="col-6 map align-middle">
       <div class="card map">
-          <div style="width: 100%; height: 600px;"
+          <div style="width: 100%; height: 500px;"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -10,7 +10,6 @@
       </div>
     </div>
     <div class="col-6 explain">
-      <hr>
       <h2>How it works</h2>
       <p>
       Welcome to our community-driven haven of second-hand books, where diverse literary treasures await your discovery. Prices set by owners ensure affordable access to captivating stories, providing a daily escape into imaginative realms.
@@ -23,7 +22,6 @@
       <br><br>
       Whether a seasoned reader or a curious newcomer, relish the joy of literary exploration. Let the pages turn and transport you to new worlds. Happy reading!
       </p>
-      <hr>
     </div>
   </div>
 </div>
