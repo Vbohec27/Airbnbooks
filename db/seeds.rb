@@ -6,6 +6,7 @@
 #
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
+Booking.delete_all
 puts "deleting books"
 Book.delete_all
 puts "deleting Users"
@@ -15,7 +16,7 @@ user1 = User.create(email: "admin@admin.com", password: "123123", username: "adm
 user2 = User.create(email: "guest@guest.com", password: "123123", username: "guest")
 #   end
 puts "creating books"
-Book.create!(
+book1 = Book.create!(
   title: "1984",
   author: "George Orwell",
   description: "1984 is a dystopian novel that was written by George Orwell and published in 1949. It tells the story of Winston Smith, a citizen of the miserable society of Oceania, who is trying to rebel against the Party and its omnipresent symbol, Big Brother.",
@@ -66,3 +67,5 @@ Book.create!(
 )
 
 puts "Done creating"
+
+Booking.create!(user_id: user1.id, book_id: book1.id, sum_price: 30, start_date: DateTime.new(2023, 11, 21), end_date: DateTime.new(2023, 11, 23))
