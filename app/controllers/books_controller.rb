@@ -3,6 +3,13 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
+    @markers = @books.geocoded.map do |book|
+      {
+        lat: book.latitude,
+        lng: book.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {book: book})
+      }
+    end
   end
 
   def show
@@ -29,6 +36,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:title, :author, :description, :price)
+    params.require(:book).permit(:title, :author, :description, :price, :genre, :photo)
   end
 end

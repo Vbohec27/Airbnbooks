@@ -9,10 +9,10 @@
     <div class="card__body">
       <div class="half">
         <div class="image">
-          <% if @book.image_url != nil %>
-          <%= image_tag(@book.image_url) %>
+          <% if @book.photo.attached? %>
+            <%= cl_image_tag(@book.photo.key, class: 'folded-corner') %>
           <% else %>
-            <%= image_tag(“book_default.jpg”) %>
+            <%= image_tag("book_default.jpg", class: 'folded-corner') %>
           <% end %>
         </div>
       </div>
