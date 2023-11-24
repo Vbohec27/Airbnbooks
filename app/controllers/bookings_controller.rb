@@ -1,9 +1,10 @@
 class BookingsController < ApplicationController
   before_action :set_book, only: %i[show new create]
 
-  def index
-    @bookings = current_user.bookings
-  end
+    def index
+      @bookings = current_user.bookings
+      @books = Book.where(user_id: current_user.id)
+    end
 
   def show
   end
