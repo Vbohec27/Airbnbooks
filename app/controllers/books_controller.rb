@@ -23,7 +23,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.user = current_user
     if @book.save
-      redirect_to book_path(@book), notice: "Book was successfully created"
+      redirect_to books_path, notice: "Book was successfully created"
     else
       render :new, status: :unprocessable_entity
     end
