@@ -1,38 +1,70 @@
-<div class = "container m-5 align-self-stretch d-flex">
 
-  <div class = "card p-3 my-auto mx-auto" style="width:250px">
-    <div class="d-flex align-items-center justify-content-center">
-      <div class="card-body">
+<main>
+  <div class="card-show">
+    <div class="card__title">
+      <div class="icon">
+        <a href="/books/"><i class="fa fa-arrow-left"></i></a>
+      </div>
+      <h3>-Rental-</h3>
+    </div>
+
+    <div class="card__body">
+
+      <div class="half">
+        <div class="image">
+          <% if @book.photo.attached? %>
+            <%= cl_image_tag(@book.photo.key, class: 'folded-corner') %>
+          <% else %>
+            <%= image_tag("book_default.jpg", class: 'folded-corner') %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="half">
+        <div class="card-body">
         <%= form_with model: @book do |form| %>
-          <div class ="form p-3">
-            <%= form.label :author, "Title" %>
-            <%= form.text_field :title %>
+          <div class ="form p-2">
+            <%= form.label :author, "Title", class: "form-label" %>
+            <br>
+            <%= form.text_field :title, class: "w-75" %>
           </div>
-          <div class ="form p-3">
-            <%= form.label :author, "Author" %>
-            <%= form.text_field :author %>
+          <div class ="form p-2">
+            <%= form.label :author, "Author", class: "form-label" %>
+            <br>
+            <%= form.text_field :author, class: "w-75" %>
           </div>
-          <div class ="form p-3">
-            <%= form.label :description, "Description" %>
-            <%= form.text_field :description %>
+          <div class ="form p-2">
+            <%= form.label :description, "Description", class: "form-label" %>
+            <br>
+            <%= form.text_field :description, class: "w-75"%>
           </div>
-          <div class ="form p-3">
-            <%= form.label :address, "Book location" %>
-            <%= form.text_field :address %>
+          <div class ="form p-2">
+            <%= form.label :address, "Address", class: "form-label" %>
+            <br>
+            <%= form.text_field :address, class: "w-75"%>
           </div>
-          <div class ="form p-3">
-            <%= form.label :author, "Price" %>
-            <%= form.number_field :price%>
+          <div class ="form p-2">
+            <%= form.label :author, "Price", class: "form-label" %>
+            <br>
+            <%= form.number_field :price, class: "w-75"%>
           </div>
-          <div class="form p-3">
-            <%= form.label :photo, "Book cover" %>
-            <%= form.file_field :photo %>
+          <div class="form p-2">
+            <%= form.label :photo, "Book cover", class: "form-label" %>
+            <br>
+            <%= form.file_field :photo, class: "w-75" %>
           </div>
-          <div class ="form p-3 btn btn-flat">
-          <%= form.submit %>
-          </div>
-        <% end %>
+      </div>
       </div>
     </div>
+    <div class="card__footer">
+      <div class="recommend">
+        <p></p>
+        <h3></h3>
+      </div>
+      <div >
+        <%= form.submit class: "action" %>
+      </div>
+      <% end %>
+    </div>
   </div>
-</div>
+</main>

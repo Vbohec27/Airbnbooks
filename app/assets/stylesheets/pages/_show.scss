@@ -7,7 +7,7 @@ main{
 .card-show{
   box-shadow: 0 6px 6px rgba(#000, 0.3);
   transition: 200ms;
-  background: #fff;
+  background: #E7E1DA;
 
   .card__title{
     display: flex;
@@ -16,18 +16,18 @@ main{
 
     h3{
       flex: 0 1 200px;
-      text-align: center;
+      text-align: right;
       margin: 0;
       color: #252525;
-      font-family: sans-serif;
-      font-weight: 600;
-      font-size: 30px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 36px;
       text-transform: uppercase;
     }
 
     .icon{
       flex: 1 0 10px;
-      background: #115dd8;
+      background: #1A3263;
       color: #fff;
       padding: 10px 10px;
       transition: 200ms;
@@ -155,8 +155,8 @@ main{
       left: 40px;
       width: calc(100% - 40px);
       height: 3px;
-      background: #115dd8;
-      background: linear-gradient(to right, #115dd8 0%,#115dd8 20%,#ddd 20%,#ddd 100%);
+      background: #1A3263;
+      background: linear-gradient(to right, #1A3263 0%,#1A3263 20%,#ddd 20%,#ddd 100%);
     }
 
     .recommend{
@@ -177,27 +177,27 @@ main{
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         text-transform: uppercase;
-        color: #115dd8;
+        color: #1A3263;
       }
     }
 
     .action{
-      button{
+
         cursor: pointer;
-        border: 1px solid #115dd8;
+        border: 1px solid #1A3263;
         padding: 14px 30px;
-        border-radius: 200px;
+        border-radius: 6px;
         color: #fff;
-        background: #115dd8;
+        background: #1A3263;
         font-family: "Open Sans", sans-serif;
         font-size: 16px;
         transition: 200ms;
 
         &:hover{
           background: #fff;
-          color: #115dd8;
+          color: #1A3263;
         }
-      }
+      
     }
   }
 }
