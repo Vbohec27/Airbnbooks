@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
     before_action :set_book, only: %i[show new create]
 
     def index
-      @bookings = Booking.all
+      @bookings = current_user.bookings
     end
 
     def show
@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
       @booking.book = @book
       @booking.user = current_user
       if @booking.save
-        redirect_to root_path
+        redirect_to bookings_path
       else
         render :new, status: :unprocessable_entity
       end
