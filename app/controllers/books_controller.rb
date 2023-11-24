@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [ :show ]
+  before_action :set_book, only: [:show]
 
   def index
     @books = Book.all
@@ -7,7 +7,7 @@ class BooksController < ApplicationController
       {
         lat: book.latitude,
         lng: book.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: {book: book})
+        info_window_html: render_to_string(partial: "info_window", locals: book: book)
       }
     end
   end
