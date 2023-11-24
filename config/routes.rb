@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :books, only: %i[index show new create] do
-      resources :bookings, only:[:index,:new, :create]
-    end
+      resources :bookings, only:[:new, :create]
+  end
+
+  resources :bookings, only:[:index]
 
 end
