@@ -31,22 +31,25 @@
   <hr>
   <div class="row">
     <% @books.each do |book| %>
-      <div class="col mb-5">
-        <div class="card d-flex flex-column justify-content-between" style="width: 18rem;">
+      <div class="col-3 mb-5">
+        <div class="card" style="width: 18rem;">
            <% if book.photo.attached? %>
             <div style="background-image: url('<%= cl_image_path book.photo.key %>')" id="index-card-bg"></div>
           <% else %>
             <div style="background-image: url('<%= image_path 'book_default.jpg' %>')" id="index-card-bg"></div>
           <% end %>
           <div class="card-body">
-            <h3 class="card-title" style="font-size: 1.7rem"><%= book.title %></h5>
+
+            <div style="height: 110px"><h3 class="card-title" style="font-size: 1.7rem"><%= book.title %></h5></div>
+
+
             <div class="card-overflow">
               <div class="">
-                <p class="card-text"><strong>Author - <%= book.author %></strong></p>
+                <%# <p class="card-text"><strong>Author - = book.author</strong></p> %>
                 <p class="card-text"><strong>Address - <%= book.address %></strong></p>
                 <p class="card-text"><strong>€<%= book.price %> per day</strong></p>
               </div>
-              <hr>
+              <%# <hr> %>
             </div>
           </div>
           <div class="see-more-btn"><%= link_to "See more", book_path(book), class: "btn btn-primary card-btn" %></div>
